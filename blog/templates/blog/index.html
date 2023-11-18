@@ -6,20 +6,16 @@
 {% endblock %}
 
 {% block css_files %}
+    <link rel="stylesheet" href="{% static 'blog/post.css'%}">
     <link rel="stylesheet" href="{% static 'blog/index.css'%}">
 {% endblock %}
 
 {% block content %}
-    <header id="main-navigation">
-        <h1><a href="">Abdur Blog</a></h1>
-        <nav>
-            <a href="">All Posts</a>
-        </nav>
-    </header>
+    
 
     <section id="welcome">
         <header>
-            <img src="" alt="Abdur - The Author of this Blog" />
+            <img src="{% static 'blog/images/profile_pic.jpg' %}" alt="Abdur - The Author of this Blog" />
             <h2>ABDUR RAHMAAN BLOG</h2>
         </header>
         <p>Hi, I am Abdur and I love to take pictures</p>
@@ -29,17 +25,9 @@
     <h2>My Latest Clicks</h2>
 
     <ul>
-        <li>
-            <article class="post">
-                <a href="">
-                    <img src="" alt="Sample picture1" />
-                    <div class="post_content">
-                        <h3>Sample picture 1</h3>
-                        <p>good picture</p>
-                    </div>
-                </a>
-            </article>
-        </li>
+        {% for post in posts %}
+        {% include "blog/includes/post.html"  %}
+        {% endfor %}
     </ul>
     </section>
     <section id="about">
