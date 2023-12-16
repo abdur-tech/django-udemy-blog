@@ -1,6 +1,6 @@
 About:
 
-It is a photo blogging platform.
+It is a photo blogging platform created using django.
 
 Installation:
 
