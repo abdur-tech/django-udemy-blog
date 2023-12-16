@@ -1,4 +1,11 @@
-Steps to run the project
+About:
+
+It is a photo blogging platform.
+
+Installation:
 
 1) clone the Repository
-2) Run python manage.py runserver to start the blog
+2) Navigate to the project directory
+3) install required dependency using requirement.txt file.
+4) Run the below command to start django server.
+    python manage.py runserver
